@@ -13,6 +13,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/products")
+@CrossOrigin(origins = {
+    "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app",
+    "http://localhost:5173"
+})
 public class ProductController {
 
     @Autowired

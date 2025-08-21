@@ -9,6 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/categories")
+@CrossOrigin(origins = {
+    "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app",
+    "http://localhost:5173"
+})
 public class CategoryController {
 
     @Autowired
