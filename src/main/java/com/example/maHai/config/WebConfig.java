@@ -13,15 +13,16 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**") // áp dụng cho tất cả endpoint /api/...
+                registry.addMapping("/api/**") 
                         .allowedOrigins(
-                            "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app", // frontend deploy
-                            "http://localhost:5173" // local dev
+                                "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app", 
+                                            "https://mahai-app-tawny.vercel.app", 
+                                            "http://localhost:5173"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // phương thức
-                        .allowedHeaders("*") // cho phép tất cả headers
-                        .allowCredentials(true) // nếu có cookie hoặc token
-                        .maxAge(3600); // cache preflight 1 giờ
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
+                        .allowedHeaders("*") 
+                        .allowCredentials(true) 
+                        .maxAge(3600);
             }
         };
     }

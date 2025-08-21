@@ -14,8 +14,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/products")
 @CrossOrigin(origins = {
-    "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app",
-    "http://localhost:5173"
+        "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app",
+        "https://mahai-app-tawny.vercel.app",
+        "http://localhost:5173"
 }, allowedHeaders = "*", allowCredentials = "true")
 public class ProductController {
 
