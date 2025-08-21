@@ -16,7 +16,7 @@ import java.util.Optional;
 @CrossOrigin(origins = {
     "https://mahai-pay2oxjqv-tranhuutinhs-projects.vercel.app",
     "http://localhost:5173"
-})
+}, allowedHeaders = "*", allowCredentials = "true")
 public class ProductController {
 
     @Autowired
