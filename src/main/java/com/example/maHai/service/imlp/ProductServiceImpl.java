@@ -81,7 +81,7 @@ private CategoryMapper categoryMapper;
 public List<CategoryDTO> getAllCategories() {
     List<Category> categories = categoryRepo.findAll();
     return categories.stream()
-            .map(categoryMapper::toDTO)  // ✅ Gọi từ instance
+            .map(categoryMapper::toDTO) 
             .collect(Collectors.toList());
 }
 
