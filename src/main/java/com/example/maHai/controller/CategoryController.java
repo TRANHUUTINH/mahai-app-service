@@ -1,7 +1,7 @@
 package com.example.maHai.controller;
 
 import com.example.maHai.dto.CategoryDTO;
-import com.example.maHai.service.ProductService;
+import com.example.maHai.service.CategoryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +14,11 @@ import java.util.List;
 public class CategoryController {
 
     @Autowired
-    private ProductService productService;
+    private CategoryService categoryService;
 
     // Lấy tất cả category
     @GetMapping
     public List<CategoryDTO> getAllCategories() {
-        return productService.getAllCategories();
+        return categoryService.getAllCategories();
     }
 }
