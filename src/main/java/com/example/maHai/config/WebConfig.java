@@ -13,16 +13,16 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**") 
-                        .allowedOrigins(
-                            "https://elegant-trust-production.up.railway.app",
-                            "https://mahai-app-tawny.vercel.app",
-                            "http://localhost:5173" 
-                        )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
-                        .allowedHeaders("*") 
-                        .allowCredentials(true) 
-                        .maxAge(3600); 
+               registry.addMapping("/api/**") 
+        .allowedOrigins(
+            "https://mahai-app-tawny.vercel.app", // FE trên Vercel
+            "http://localhost:5173"              // FE dev local
+        )
+        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
+        .allowedHeaders("*") 
+        .allowCredentials(true) 
+        .maxAge(3600);
+
             }
         };
     }
